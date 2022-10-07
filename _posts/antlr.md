@@ -32,8 +32,9 @@ Simple to understand and use
 Good to have:
 Content-assist and code completion
  
-Approaches
-Programming language
+**Approaches**
+
+     1. Programming language
         The most robust approach would be to implement the rules in a programming language.
         Pros: Robust testing suite, content assist, well-known
         Cons: Higher time-to-market due to compile-build-deploy cycle and confined to developers
@@ -44,16 +45,16 @@ Programming language
         Cons: Confined to developers
  
      3. XML
-       Most open-source projects follow this approach for its inherent flexibility and extensibility.
-       (example: http://www.quickfixj.org/quickfixj/usermanual/1.5.3/usage/validation.html)
+        Most open-source projects follow this approach for its inherent flexibility and extensibility.
+        (example: http://www.quickfixj.org/quickfixj/usermanual/1.5.3/usage/validation.html)
         Pros: Lower time-to-market
         Cons: Needs some technical expertise
                   Too generic and difficult to integrate content-assist with FIX data dictionary
  
      4. DSL
        Pros: Specific to domain
-                Easy to understand
-                Ease of integrating content-assist with FIX data dictionary
+             Easy to understand
+             Ease of integrating content-assist with FIX data dictionary
        Cons: Comparatively longer time to develop
  
 We explore the process of building a domain-specific language (approach 4), which in our context has the following advantages:
@@ -113,7 +114,7 @@ Examples:
 tag(59) must be equal to 1;  
 tag(8) must be in "FIX.4.2","FIX.4.3","FIX.4.4" ;  
 tag(9) must be present;  
-tag(35) = "RIO";  
+tag(35) = "D";  
 tag(56) must not be equal to "CORE8";  
 tag(9) must be equal to 954;  
 tag(9) = 954;  
@@ -129,17 +130,7 @@ tag(60) must be in past;
 tag(52) must be in future;  
 tag(126) must be present if tag(59) = 1;  
 tag(126) must be present if tag(59) = 1 and tag(9) is numeric and tag(11) is present;  
- 
- 
-Quick working demo:
- 
-http://vm-b26d-0e7a.nam.nsroot.net:8999/
- 
-1.png
-2.png
-3.png
-4.png
- 
+
 What works:
 Rule definitions and executions
  
